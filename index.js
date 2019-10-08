@@ -39,6 +39,7 @@ app.use(
                 `;
                 const beforeHeadStarts = body.indexOf(HEAD_START_LABEL) + HEAD_START_LABEL.length;
                 body = body.slice(0, beforeHeadStarts) + injectData + body.slice(beforeHeadStarts);
+                res.setHeader('content-type', 'text/html');
                 res.send(body);
             });
         },
