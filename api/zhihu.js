@@ -7,7 +7,7 @@ module.exports = proxy({
         console.log(path);
         const { question } = req.query;
         console.log(question);
-        return '/question${question}';
+        return `/question${question}`;
     },
     onProxyRes: (proxyRes, req, res) => {
         console.log(proxyRes.headers)
