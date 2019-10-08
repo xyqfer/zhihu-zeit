@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "node test.js",
-    "build": "npm run test"
+    "build": "npm run test && echo 123"
   },
   "repository": {
     "type": "git",
