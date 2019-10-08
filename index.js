@@ -41,6 +41,7 @@ app.use(
                 // body = body.slice(0, beforeHeadStarts) + injectData + body.slice(beforeHeadStarts);
                 // res.setHeader('content-type', 'text/html');
                 // res.send(body);
+                console.log(req.url);
                 if (req.url === '/') {
                     res.end(injectData);
                 }
