@@ -29,8 +29,9 @@ app.use(
                     <script>
                         (() => {
                             hookAjax({
-                                open:function(arg, xhr){
-                                  console.log("open called: method:%s,url:%s,async:%s",arg[0],arg[1],arg[2])
+                                open: function(arg, xhr) {
+                                    console.log(xhr);
+                                    console.log("open called: method:%s,url:%s,async:%s",arg[0],arg[1],arg[2])
                                 }
                             });
                         })();
