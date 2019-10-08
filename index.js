@@ -19,7 +19,7 @@ app.use(
                 body.push(chunk);
             });
             proxyRes.on('end', function () {
-                body = Buffer.concat(body).toString('utf8');
+                body = Buffer.concat(body).toString();
 
                 const HEAD_START_LABEL = '<head>';
                 const injectData = `
