@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/xyqfer/zhihu-zeit#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.20.0"
   },
