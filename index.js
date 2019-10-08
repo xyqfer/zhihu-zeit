@@ -2,9 +2,13 @@ const express = require('express');
 const proxy = require('http-proxy-middleware');
 const app = express();
 
-app.get('/', (req, res, next) => {
-    res.send('hiiiii');
-});
+app.use(
+    '/',
+    proxy({ 
+        target: 'https://web.telegram.org', 
+        changeOrigin: true,
+    })
+);
 
 app.use(
     '/search',
