@@ -11,7 +11,7 @@ app.use(
     '/',
     proxy({ 
         target: 'https://web.telegram.org',
-        selfHandleResponse : true,
+        // selfHandleResponse : true,
         changeOrigin: true,
         onProxyRes: (proxyRes, req, res) => {
             let body = [];
@@ -37,10 +37,13 @@ app.use(
                         })();
                     </script>
                 `;
-                const beforeHeadStarts = body.indexOf(HEAD_START_LABEL) + HEAD_START_LABEL.length;
-                body = body.slice(0, beforeHeadStarts) + injectData + body.slice(beforeHeadStarts);
-                res.setHeader('content-type', 'text/html');
-                res.send(body);
+                // const beforeHeadStarts = body.indexOf(HEAD_START_LABEL) + HEAD_START_LABEL.length;
+                // body = body.slice(0, beforeHeadStarts) + injectData + body.slice(beforeHeadStarts);
+                // res.setHeader('content-type', 'text/html');
+                // res.send(body);
+                if (req.url === '/') {
+                    res.end(injectData);
+                }
             });
         },
     })
