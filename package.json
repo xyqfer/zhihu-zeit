@@ -4,9 +4,7 @@
   "description": "zhihu test",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js",
-    "build": "npm run test && echo 123"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
