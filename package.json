@@ -1,0 +1,27 @@
+{
+  "name": "zhihu-zeit",
+  "version": "1.0.0",
+  "description": "zhihu test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyqfer/zhihu-zeit.git"
+  },
+  "keywords": [
+    "zhihu"
+  ],
+  "author": "liangliang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xyqfer/zhihu-zeit/issues"
+  },
+  "homepage": "https://github.com/xyqfer/zhihu-zeit#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.20.0"
+  }
+}
