@@ -9,6 +9,7 @@ module.exports = proxy({
         return '/question${question}';
     },
     onProxyRes: (proxyRes, req, res) => {
+        console.log(proxyRes.headers)
       proxyRes.on('data', (chunk) => {});
       proxyRes.on('end', () => {
           res.end(`
