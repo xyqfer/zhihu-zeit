@@ -4,6 +4,7 @@ module.exports = proxy({
     target: 'https://www.zhihu.com', 
     changeOrigin: true,
     pathRewrite: (path, req) => {
+        console.log(path);
         const { question } = req.query;
         console.log(question);
         return '/question${question}';
