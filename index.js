@@ -2,7 +2,7 @@ const express = require('express');
 const proxy = require('http-proxy-middleware');
 const app = express();
 
-app.get("/get", (req, res, next) => {
+app.get('/', (req, res, next) => {
     res.send('hiiiii');
 });
 
