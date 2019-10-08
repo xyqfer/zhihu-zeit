@@ -30,7 +30,7 @@ app.use(
     })
 );
 
-const port = 3010;
+const port = 3000;
 app.listen(port, () => {
     console.log('Node app is running on port:', port);
 });
