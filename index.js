@@ -1,7 +1,6 @@
 const express = require('express');
 const proxy = require('http-proxy-middleware');
 const cors = require('cors');
-const expressWs = require('express-ws');
 const app = express();
 
 app.use(cors({
@@ -16,8 +15,24 @@ app.use(
     })
 );
 
-expressWs(app);
-app.ws('/conn2', require('./routes/conn2'));
+const tgPath = '/apiw1';
+app.use(
+    `${tgPath}/:name`,
+    proxy({
+        target: 'https://venus.web.telegram.org',
+        changeOrigin: true,
+        router: (req) => {
+            const name = req.path.replace(`${tgPath}/`, '');
+            return `https://${name}.web.telegram.org`;
+        },
+        pathRewrite: (path, req) => {
+            return tgPath;
+        },
+        onError: (err, req, res) => {
+            console.error(`tg ${req.path} error`);
+        },
+    }),
+);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
