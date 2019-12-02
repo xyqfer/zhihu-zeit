@@ -2,11 +2,11 @@
     "version": 2,
     "name": "zhihu-zeit",
     "builds": [{
-        "src": "index.js",
+        "src": "index2.js",
         "use": "@now/node-server"
     }],
     "routes": [{
         "src": "/.*",
-        "dest": "/index.js"
+        "dest": "/index2.js"
     }]
 }
