@@ -14,7 +14,7 @@ app.ws('/abc', function (ws, req) {
         console.log(msg);
         ws.send(msg + ' abc');
     });
-    console.log('socket', req.testing);
+    console.log('socket');
 });
 
 app.listen(process.env.PORT || 3000);
