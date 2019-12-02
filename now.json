@@ -6,7 +6,7 @@
         "use": "@now/node-server"
     }],
     "routes": [{
-        "src": "/.*",
+        "src": "*",
         "dest": "/index2.js"
     }]
 }
